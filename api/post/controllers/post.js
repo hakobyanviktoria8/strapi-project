@@ -8,13 +8,13 @@
 module.exports = {
   async create(ctx) {
     let entity;
-    const user=ctx.state.user.id;
+    const user = ctx.state.user.id;
     if (ctx.is('multipart')) {
-      const { data, files } = parseMultipartData(ctx);
-      entity = await strapi.services.posts.create({...data, user}, { files });
+      const {data, files} = parseMultipartData(ctx);
+      entity = await strapi.services.post.create({...data, user}, {files});
     } else {
-      entity = await strapi.services.posts.create({...ctx.request.body,user});
+      entity = await strapi.services.post.create({...ctx.request.body, user});
     }
-    return sanitizeEntity(entity, { model: strapi.models.posts });
+    return sanitizeEntity(entity, {model: strapi.models.post});
   },
 };
