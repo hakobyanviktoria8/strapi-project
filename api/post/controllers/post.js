@@ -33,7 +33,7 @@ module.exports = {
   //     const { data, files } = parseMultipartData(ctx);
   //     entity = await strapi.services.post.create({...data, user}, { files });
   //   } else {
-  //     entity = await strapi.services.post.create({...ctx.request.body,user});
+  //     entity = await strapi.services.post.create({...ctx.request.body, user});
   //   }
   //   return sanitizeEntity(entity, { model: strapi.models.post });
   // },
