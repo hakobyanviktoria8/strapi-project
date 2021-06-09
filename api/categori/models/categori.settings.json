@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categoris",
+  "info": {
+    "name": "categori"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "restorant11": {
+      "collection": "order",
+      "via": "categoris",
+      "dominant": true
+    }
+  }
+}
